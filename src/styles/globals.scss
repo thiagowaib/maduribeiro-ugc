@@ -7,12 +7,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
     
     section {
         max-width: $scWidth-max;
-        background-color: white; //! PARA DESENVOLVIMENTO
+        // background-color: white; //! PARA DESENVOLVIMENTO
     }
-    background-color: whitesmoke; //! PARA DESENVOLVIMENTO
+    // background-color: whitesmoke; //! PARA DESENVOLVIMENTO
 }
 
 .banner {
@@ -74,6 +75,30 @@ body {
         p{
             width: fit-content;
             font-size: 1em;
+        }
+    }
+}
+.about {
+    margin-top: 150px;
+    display: flex;
+    max-width: $scWidth-large;
+
+    .about-image {
+        width: 40%;
+        border-radius: 10%;
+    }
+
+    div {
+        margin-left: 42px;
+        font-style: italic;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        h1{
+            font-size: 3em;
+        }
+        p{
+            font-size: 1.125em;
         }
     }
 }
