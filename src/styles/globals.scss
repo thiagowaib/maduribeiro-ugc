@@ -1,0 +1,79 @@
+@use 'variables' as *;
+
+body {
+    background-color: $grayscale-100;
+    width: $scWidth-full;
+    height: $scHeight-full;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    section {
+        max-width: $scWidth-max;
+        background-color: white; //! PARA DESENVOLVIMENTO
+    }
+    background-color: whitesmoke; //! PARA DESENVOLVIMENTO
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+    .banner-main {
+        display: flex;
+        flex-direction: row;
+        
+        .banner-title {
+            width: 50%;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            text-align: center;
+            h1 {
+                font-size: 5em;
+                font-style: italic;
+            }
+            h2{
+                font-size: 1.5em;
+                font-style: italic;
+            }
+        }
+        
+        .banner-image {
+            max-width: calc($scWidth-max/2);
+            width: 50%;
+            border-radius: 0 0 10% 10%;
+        }
+    }
+}
+.ugc-explainer {
+    width: $scWidth-full;
+    display: flex;
+    justify-content: center;
+    background-color: $terracota;
+    color: $grayscale-100;
+    margin-top: -175px;
+
+    div {
+        max-width: $scWidth-max;
+        width: $scWidth-full;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 24px;
+
+        p.garamond{
+            width: 20%;
+            text-align: center;
+            font-size: 2em;
+        }
+        
+        p{
+            width: fit-content;
+            font-size: 1em;
+        }
+    }
+}
