@@ -1,0 +1,31 @@
+@mixin font-face($font-family, $font-name, $font-weight: normal, $font-style: normal) {
+    @font-face {
+      font-family: "#{$font-family}";
+      src: url("../assets/fonts/#{$font-family}/#{$font-name}.ttf") format("truetype");
+      font-weight: $font-weight;
+      font-style: $font-style;
+    }
+}
+
+@include font-face("Montserrat", "Montserrat-ExtraBold", bolder, normal);
+@include font-face("Montserrat", "Montserrat-ExtraBoldItalic", bolder, italic);
+@include font-face("Montserrat", "Montserrat-Bold", bold, normal);
+@include font-face("Montserrat", "Montserrat-BoldItalic", bold, italic);
+@include font-face("Montserrat", "Montserrat-Regular", normal, normal);
+@include font-face("Montserrat", "Montserrat-Italic", normal, italic);
+@include font-face("Montserrat Semibold", "Montserrat-Medium", normal, normal);
+@include font-face("Montserrat Semibold", "Montserrat-MediumItalic", normal, italic);
+
+
+@include font-face("EB Garamond", "EBGaramond-ExtraBold" bolder, normal);
+@include font-face("EB Garamond", "EBGaramond-ExtraBoldItalic" bolder, italic);
+@include font-face("EB Garamond", "EBGaramond-Bold" bold, normal);
+@include font-face("EB Garamond", "EBGaramond-BoldItalic" bold, italic);
+@include font-face("EB Garamond", "EBGaramond-Regular" normal, normal);
+@include font-face("EB Garamond", "EBGaramond-Italic" normal, italic);
+@include font-face("EB Garamond Semibold", "EBGaramond-SemiBold" normal, normal);
+@include font-face("EB Garamond Semibold", "EBGaramond-SemiBoldItalic" normal, italic);
+
+h1,h2,h3,h4,h5,h6,p,q,span,a,li,button { font-family: "Montserrat", sans-serif;}
+h1.garamond,h2.garamond,h3.garamond,h4.garamond,h5.garamond,h6.garamond,p.garamond,q.garamond,span.garamond,a.garamond,li.garamond,button.garamond {font-family: "EB Garamond", serif;}
+strong {font-weight: bold;}
