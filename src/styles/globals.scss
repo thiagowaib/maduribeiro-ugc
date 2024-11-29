@@ -4,17 +4,17 @@ h1,h2,h3,h4,h5,h6,p,q,span,a,li,button { font-family: "Montserrat", sans-serif;}
 h1.garamond,h2.garamond,h3.garamond,h4.garamond,h5.garamond,h6.garamond,p.garamond,q.garamond,span.garamond,a.garamond,li.garamond,button.garamond {font-family: "EB Garamond", serif;}
 strong {font-weight: bold;}
 
-.desktop{
-    display: flex;
+*.desktop{
+    display: flex !important;
     @media screen and (max-width: $breakpoint-mobile){
-        display: none;
+        display: none !important;
     }
 }
 
-.mobile {
-    display: none;
+*.mobile {
+    display: none !important;
     @media screen and (max-width: $breakpoint-mobile){
-        display: flex;
+        display: flex !important;
     }
 }
 
@@ -115,6 +115,7 @@ body {
         p.garamond{
             width: 20%;
             text-align: center;
+            font-style: italic;
             font-size: 2em;
             @media screen and (max-width: $breakpoint-mobile){
                 font-size: 1.25em;
@@ -137,7 +138,6 @@ body {
         @media screen and (max-width: $breakpoint-mobile){
             flex-direction: column;
         }
-
     }
 }
 .about {
@@ -146,23 +146,80 @@ body {
     display: flex;
     max-width: $scWidth-large;
 
-    .about-image {
-        width: 40%;
-        border-radius: 10%;
+    div.desktop{
+        display: flex;
+        max-width: $scWidth-max;
+        .about-image {
+            width: 40%;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 10%;
+            }
+        }
+
+        div {
+            width: 60%;
+            margin-left: 42px;
+            font-style: italic;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            h1{
+                font-size: 3em;
+            }
+            p{
+                font-size: 1.125em;
+            }
+        }
     }
 
-    div {
-        margin-left: 42px;
-        font-style: italic;
+    div.mobile{
+        
         display: flex;
+        max-width: $scWidth-max;
         flex-direction: column;
-        justify-content: space-evenly;
-        h1{
-            font-size: 3em;
+        div{
+            display: flex;
+            flex-direction: row;
+            .about-image {
+                width: 50%;
+                text-align: left;
+                margin-left: 12px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10%;
+                }
+            }
+
+            div {
+                width: 50%;
+                margin-left: 24px;
+                font-style: italic;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                h1{
+                    font-size: 1em;
+                }
+                p{
+                    margin-top: 0;
+                    margin-left: 0;
+                }
+            }
         }
         p{
-            font-size: 1.125em;
+            
+            margin-left: 12px;
+            margin-top: 12px;
+            font-size: .75em;
         }
+    }
+
+
+    @media screen and (max-width: $breakpoint-mobile){
+        margin-top: 24px;
     }
 }
 .cta-about {
@@ -177,10 +234,17 @@ body {
     div {
         max-width: $scWidth-max;
         padding: 12px;
-        p{
+        p.desktop{
             font-size: 1.75em;
             font-style: italic;
         }
+        p.mobile{
+            font-size: 1em;
+            font-style: italic;
+        }
+    }
+    @media screen and (max-width: $breakpoint-mobile){
+        margin-top: 24px;
     }
 }
 
