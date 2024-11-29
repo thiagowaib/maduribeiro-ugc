@@ -533,14 +533,14 @@ body {
         width: $scWidth-full;
         flex-wrap: wrap;
         li{
+            display: flex;
+            flex-direction: column;
             &:nth-child(2){
                 margin: 0 24px;
                 @media screen and (max-width: $breakpoint-mobile){
                     margin: 0;
                 }
             }
-            display: flex;
-            flex-direction: column;
             a{
                 margin:2px;
                 color: $grayscale-800;
